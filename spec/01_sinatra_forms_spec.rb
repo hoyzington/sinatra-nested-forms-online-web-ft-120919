@@ -4,7 +4,7 @@ describe "FormsLab::App" do
       get '/'
     end
 
-    it "returns a 200 status code" do
+    it "returns a 200 status code" do 
       expect(last_response.status).to eq(200)
     end
 
@@ -25,7 +25,7 @@ describe "FormsLab::App" do
     it "renders a new form element on the page" do
       expect(last_response.body).to include("<form")
       expect(last_response.body).to include("</form>")
-    end
+    end 
 
     it "renders the pirate input fields for name, weight, and height attributes on the page" do
       expect(last_response.body).to include("pirate[name]")
@@ -46,7 +46,7 @@ describe "FormsLab::App" do
     end
   end
 
-  describe "POST '/pirates'" do
+  describe "POST '/pirates'" do 
     before do
       post '/pirates', {
         "pirate"=> {
