@@ -4,6 +4,7 @@ require 'bundler'
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
 require 'sinatra/base'
-require 'sinatra/reloader'
+#require 'sinatra/reloader'
 
-require_relative './app'
+require_relative './app/models/pirate'
+require_relative './app/models/ship'
